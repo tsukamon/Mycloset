@@ -55,35 +55,12 @@ header{
 	width:100%;
 	overflow:hidden;}
 
-
-/*	タイトル	*/
-#top h1{
-	ackground-image:-moz-linear-gradient(top, #434641, #292b27);
-	background-image:-webkit-gradient(linear, center top, center bottom, from(#434641), to(#292b27));
-	background-image:-o-linear-gradient(top, #434641, #292b27);
-	background-image:linear-gradient(top, #434641, #292b27);
-	width:100%;
-	padding:3% 10px;
-	border-bottom:solid 1px #11120F;
-	color:#FFF;
-  text-shadow:1px 1px 1px #11120F;
-  font-family: 'Bangers', cursive;
-  font-size: 20px;
-  text-align: center;
-  
-}
-
-.introduction {
-  text-align: center;
-  font-size: 15px;
-}
-
 .lists-right {
   display: flex;
   list-style: none;
   justify-content: flex-end;
 }
-.login, .sign-up {
+.login, .sign-up, .logout, .user-nickname {
   margin-right: 10px;
   display: inline-block;
   padding: 0.25em 0.5em;
@@ -94,14 +71,13 @@ header{
   border-radius: 4px;
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
   text-shadow: 0 1px 0 rgba(0,0,0,0.2);
-  }
+}
   
-  .btn-square-little-rich:active {
+.btn-square-little-rich:active {
     /*押したとき*/
     border: solid 1px #03A9F4;
     box-shadow: none;
     text-shadow: none;
-  }
 }
 
 header h2{
@@ -111,4 +87,37 @@ header h2{
 header p.des{
 	padding:0 10px;
 	margin-bottom:5%;
-} */
+} 
+
+.main-header img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-header {
+  position: relative;
+  }
+
+.introduction {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  font-size: 3vh;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 2px 3px #808080;
+}
+.des {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  color: white;
+  text-shadow: 1px 2px 3px #808080;
+
+}

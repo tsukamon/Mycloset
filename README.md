@@ -7,7 +7,6 @@
 | nickname                 | string  | null: false  | 
 | email                    | string  | null: false  |
 | password                 | string  | null: false  |
-| text                     | string  | null: false  |
 
 ### Association
 
@@ -20,11 +19,11 @@
 | user             | references  | null: false, foreign_key: true |
 | explanation      | text        |                                | 
 | category_id      | integer     | null: false                    |
-| brand            | text        | null: false                    |
-| parchase_day     | date        | null: false                    |
-| price            | integer     | null: false                    |
+| brand            | string      |                                |
+| parchase_day     | date        |                                |
+| price            | string      |                                |
 | season_id        | integer     | null: false                    |
-| where            | text        |                                |
+| place            | string      |                                |
 
 
 ### Association
