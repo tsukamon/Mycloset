@@ -60,7 +60,7 @@ header{
   list-style: none;
   justify-content: flex-end;
 }
-.login, .sign-up {
+.login, .sign-up, .logout, .user-nickname {
   margin-right: 10px;
   display: inline-block;
   padding: 0.25em 0.5em;
