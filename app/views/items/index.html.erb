@@ -1,21 +1,21 @@
 <body>
 <!-- ▼ヘッダー▼ -->
 <header>
-	<div id="top">
-	<h1>My CLOSET</h1>
-  <div class='nav'>
-    <ul class='lists-right'>
-      <li><%= link_to 'ログイン', "#", class: "login" %></li>
-      <li><%= link_to '新規登録', "#", class: "sign-up" %></li>
-    </ul>
+<div id="top">
+  <%= render "shared/header" %>
+    <div class='nav'>
+      <ul class='lists-right'>
+        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      </ul>
+    </div>
   </div>
-
-	</div>
-	<h2 class="introduction">アプリ紹介</h2>
-	<p class="des">このアプリは服管理アプリです。<br>
-	あなたが持っている服を写真やカテゴリー別に保存することで自分の持っている服を管理する事ができます。<br>
+<div class="main-header">
+<%= image_tag "cabinet-1853504_1920.jpg", class:"header-pict" %>
+<h2 class="introduction">アプリ紹介</h2>
+  <p class="des">このアプリは服管理アプリです。<br>
+  あなたが持っている服を写真やカテゴリー別に保存することで自分の持っている服を管理する事ができます。<br>
   店先で自分が持っている服を確認したい時、今日どんな服を着て行こうか悩んでいる方の手助けになればと思っております。
-	</p>
-
+  </p>
 </header>
 </body>
