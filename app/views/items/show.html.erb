@@ -1,0 +1,51 @@
+<header>
+<div id="top">
+  <%= render "shared/header" %>
+  <%= render "shared/nav" %>
+</div>
+</header>
+
+<div class="item-show">
+  <div class="item-mandatory">
+    <h2 class="category-name">
+      <span class="category-title">CATEGORY/</span>
+      <%= @item.category.name %>
+    </h2>
+  </div>
+  <div class="item-img-contents">
+    <%= image_tag @item.image.variant(resize:'350x450'), class:"item-box-img" %>
+  </div>
+  <div class="item-explain-box">
+    備考：
+    <span><%= @item.explanation %></span>
+  </div>
+  <div class="item-remarks">
+    <table>
+    <tr>
+      <th>ブランド名</th>
+      <td><%= @item.brand %></td>
+    </tr>
+    <tr>
+      <th>購入日</th>
+      <td><%= @item.purchase_day %></td>
+    </tr>
+    <tr>
+      <th>購入金額</th>
+      <td><%= @item.price %></td>
+    </tr>
+    <tr>
+      <th>購入場所</th>
+      <td><%= @item.place %></td>
+    </tr>
+    </table>
+  </div>
+  <div class="edit-btn">
+    <% if user_signed_in? && current_user.id == @item.user_id %>
+      <%= link_to '商品の編集',  edit_item_path(@item.id), method: :get, class: "item-edit-btn" %>
+      <%= link_to '削除', item_path(@item.id), method: :delete, class:'item-destroy' %>
+    <% end %>
+  </div>
+  <div class="input-btn-contents">
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
+  </div>
+</div>

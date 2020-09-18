@@ -1,44 +1,8 @@
 @charset "UTF-8";
 
-/*------------------------------------------------------------
-	デフォルトスタイル
-------------------------------------------------------------*/
-html, body, div, span, figure, img, fieldset,
-a, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, small, strong, dl, dt, dd, ol, ul, li,
-table, caption, tbody, tfoot, thead, tr, th, td{
-	margin:0;
-	padding:0;
-	border:none;
-	outline:none;
-	font-size:1em;
-}
-
-header,hgroup,nav,article,
-section,aside,figure,footer{
-	display:block;
-}
-
-ol, ul{
-	list-style: none;  
-}
-
 html{
     font:14px/1.3 "メイリオ", Meiryo, Osaka, "ヒラギノ角ゴ Pro W3", "ＭＳ ゴシック", Arial, Helvetica, Tahoma, sans-serif;
 }
-
-
-
-/*------------------------------------------------------------
-	レイアウト
-------------------------------------------------------------*/
-body{
-	background:#FFF;
-	width:100%;
-	color:#333631;
-}
-
-/*	リンクタグ	*/
 
 a,
 a:hover{
@@ -46,11 +10,6 @@ a:hover{
 	text-decoration:none;
 }
 
-
-
-/*------------------------------------------------------------
-	ヘッダー
-------------------------------------------------------------*/
 header{
 	width:100%;
 	overflow:hidden;}
@@ -73,13 +32,6 @@ header{
   text-shadow: 0 1px 0 rgba(0,0,0,0.2);
 }
   
-.btn-square-little-rich:active {
-    /*押したとき*/
-    border: solid 1px #03A9F4;
-    box-shadow: none;
-    text-shadow: none;
-}
-
 header h2{
 	padding:10px;
 }
@@ -119,5 +71,60 @@ header p.des{
   transform: translate(-50%,-50%);
   color: white;
   text-shadow: 1px 2px 3px #808080;
+}
 
+.post-btn {
+  position: fixed;
+  right: 0;
+  background: white;
+  text-align: center;
+}
+
+.post-btn-text {
+  display: block;
+  font-weight: bold;
+  border-bottom-style: solid;
+}
+
+.herder-contents {
+  /* border: 4px solid black; */
+}
+
+
+.lists-left {
+  display: flex;
+  /* border: 1px solid black; */
+}
+
+.category-list {
+  margin-left: 3vw;
+  border-left: 3px solid black;
+  padding-left: 4px;
+}
+
+.season-list {
+  border-left: 3px solid black;
+  margin-left: 3vw;
+  padding-left: 4px;
+}
+
+.title {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 3vh;
+}
+
+/* NEW ARRIVAL */
+
+.item-lists {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-info {
+  margin: 1vh 0;
+}
+
+.list {
+  margin: 10px 0 0 3px;
 }

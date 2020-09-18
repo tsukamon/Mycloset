@@ -1,5 +1,4 @@
 #top h1{
-	ackground-image:-moz-linear-gradient(top, #434641, #292b27);
 	background-image:-webkit-gradient(linear, center top, center bottom, from(#434641), to(#292b27));
 	background-image:-o-linear-gradient(top, #434641, #292b27);
 	background-image:linear-gradient(top, #434641, #292b27);

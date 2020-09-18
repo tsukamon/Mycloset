@@ -6,7 +6,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.integer :category_id,     null: false
       t.integer :season_id,       null: false
       t.string :brand
-      t.date :parchase_day
+      t.date :purchase_day
       t.string :price
       t.string :place
 
