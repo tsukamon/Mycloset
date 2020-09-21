@@ -1,3 +1,87 @@
- <%= form_with(model: @item, local: true) do |f| %>
+<%= render "shared/header" %>
+<%= render "shared/nav" %>
 
- <%= render 'shared/error_messages', model: f.object %>
+<div class="item-main">
+  <h2 class="new-item-title">アイテム情報を入力</h2>
+  <%= form_with model: @item, local: true do |f| %>
+
+  <%= render "shared/error_item_messages", model: f.object %> 
+
+  
+  <div class="images-item">
+    <div class="weight-bold-text">
+        アイテム画像
+        <span class="indispensable">※必須</span>
+    </div>
+    <%= f.file_field :image, accept: '.jpeg, .jpg, .gif, .png, .bmp', id:"item-imag" %>
+  </div>
+
+  <div class="explanation-item">
+    <div class="weight-bold-text">
+      アイテム説明
+      <span class="indispensable">※任意</span>
+    </div>
+    <%= f.text_area :explanation, class:"items-text", id:"item-info", placeholder:"商品の説明（素材や合わせ方など自由に使ってください)" ,rows:"6" ,maxlength:"300" %>
+  </div>
+  <div class="category-item">
+    <div class="weight-bold-text">
+      カテゴリー
+      <span class="indispensable">(※必須)</span>
+    </div>
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+  </div>
+  <div class="season-item">
+    <div class="weight-bold-text">
+      シーズン
+      <span class="indispensable">(※必須)</span>
+    </div>
+    <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {class:"select-box", id:"season-category"}) %>
+  </div>
+  <div class="bland-item">
+    <div class="weight-bold-text">
+      ブランド
+      <span class="indispensable">(※任意)</span>
+    </div>
+    <%= f.text_area :brand, class:"small-items-text", id:"item-info", placeholder:"ブランド名" ,rows:"1" ,maxlength:"50" %>
+  </div>
+  <div class="place-item">
+    <div class="weight-bold-text">
+      購入されたお店
+      <span class="indispensable">(※任意)</span>
+    </div>
+    <%= f.text_area :place, class:"small-items-text", id:"item-info", placeholder:"名前またはサイトURLなど" ,rows:"1" ,maxlength:"50" %>
+  </div>
+  <div class="price-item">
+    <div class="weight-bold-text">
+      購入価格
+      <span class="indispensable">(※任意)</span>
+    </div>
+    <%= f.text_area :price, class:"price-items-text", id:"item-info", placeholder:"半角数字" ,rows:"1" ,maxlength:"50" %>
+  </div>
+  <div class="form-group">
+    <div class='weight-bold-text'>
+      購入日
+      <span class="indispensable">(※任意)</span>
+    </div>
+    <div class='input-date'>
+      <%= raw sprintf(
+        f.date_select(
+          :purchase_day,
+          class:'select-date',
+          id:"pachase-date",
+          use_month_numbers: true,
+          prompt:'--',
+          start_year: (Time.now.year) - 5,
+          end_year: (Time.now.year),
+          date_separator: '%s'),
+        "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+  </div>
+
+  <div class="input-btn-contents">
+    <%= f.submit "変更する" ,class:"input-btn" %>
+
+    <%=link_to 'もどる', item_path(@item.id), class:"back-btn" %>
+  </div>
+
+  <%end%>
+</div>

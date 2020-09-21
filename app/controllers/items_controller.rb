@@ -1,4 +1,8 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_user!, except: :index
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+
   def index
     if user_signed_in?
       @item = Item.all.where(user_id: current_user.id)
@@ -20,12 +24,42 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id]) 
   end
+
+  def edit
+  end
+
+  def update
+    if @item.update(item_params)
+      redirect_to item_path(@item.id)
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    if @item.destroy
+      redirect_to root_path
+    else
+      render 'show'
+    end
+  end
+
+
 
   private
 
   def item_params
     params.require(:item).permit(:explanation, :category_id, :season_id, :brand, :purchase_day, :price, :place, :image).merge(user_id: current_user.id)
+  end
+
+  def set_item 
+    @item = Item.find(params[:id]) 
+  end
+
+  def set_user
+    unless user_signed_in? && current_user.id == @item.user_id
+      redirect_to root_path
+    end
   end
 end

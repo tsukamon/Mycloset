@@ -86,14 +86,10 @@ header p.des{
   border-bottom-style: solid;
 }
 
-.herder-contents {
-  /* border: 4px solid black; */
-}
 
 
 .lists-left {
   display: flex;
-  /* border: 1px solid black; */
 }
 
 .category-list {
