@@ -6,8 +6,8 @@
 <%# 検索結果の個数で条件分岐 %>
 <div class="item_entry">
   <ul class="item-lists">
-<% if @results.length !=0 %>
-<% @results.each do |item| %>
+  <% if @results.length !=0 %>
+  <% @results.each do |item| %>
     <li class='list'>
       <div class='item-info'>
         <h3 class='item-category'>
@@ -23,11 +23,11 @@
         </div>
       <%end%>
     </li>
-<% end %>
-<% else %>
-  <div class="no-item">NO ITEM...</div>
-<% end %>
+  <% end %>
+  <% else %>
   </ul>
+  <div class="no-item">NO ITEM...</div>
+  <% end %>
 </div>
 
 
