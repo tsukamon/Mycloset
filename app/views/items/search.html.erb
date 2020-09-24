@@ -1,0 +1,36 @@
+<div id="top">
+  <%= render "shared/header" %>
+  <%= render "shared/nav" %>
+</div>
+<h2 class="title">SEARCH ITEM</h2>
+<%# 検索結果の個数で条件分岐 %>
+<div class="item_entry">
+  <ul class="item-lists">
+<% if @results.length !=0 %>
+<% @results.each do |item| %>
+    <li class='list'>
+      <div class='item-info'>
+        <h3 class='item-category'>
+          <%= item.category.name %>
+        </h3>
+        <div class='item-season'>
+          <%= item.season.name %>
+        </div>
+      </div>
+      <%= link_to item_path(item.id) do %>
+        <div class='item-img-content'>
+          <%= image_tag item.image.variant(resize:'119x160'), class: "item-img" %>
+        </div>
+      <%end%>
+    </li>
+<% end %>
+<% else %>
+  <div class="no-item">NO ITEM...</div>
+<% end %>
+  </ul>
+</div>
+
+
+<div class="input-btn-contents">
+  <%= link_to 'トップページへ戻る', root_path, class:"back-btn" %>
+</div>

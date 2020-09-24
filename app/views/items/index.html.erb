@@ -26,25 +26,21 @@
     <span class="post-btn-text">NEW ITEM</span>
     <%= link_to image_tag('カメラアイコン8.jpeg', class: "post-btn-icon"), new_item_path %>
   </div>
-  <div class="item-contents">
-    <div class="herder-contents">
-      <div class="left-nav">
-        <ul class="lists-left">
-          <li><%= link_to 'カテゴリー別', "#", class: "category-list" %></li>
-          <li><%= link_to 'シーズン別', "#", class: "season-list" %></li>
-        </ul>
-      </div>
-      <h2 class="title">NEW ARRIVAL</h2>
-    </div>
+  <div class="left-nav">
+    <%= search_form_for(@p, url: search_path, method: :search, method: :get ) do |f| %>
+      <%= f.label :category_name_eq, 'カテゴリー：' %>
+      <%= f.collection_select :category_name_eq, @category_name, :name, :name %>
+      <br>
+    <%= f.submit '検索', class:"search-btn" %>
+    <% end %> 
   </div>
+  <h2 class="title">NEW ARRIVAL</h2>
   <div class="item_entry">
 	  <ul class="item-lists">
       <%= render "shared/item"%>
     </ul>
   </div>
-
-
-
+</div>
 <%end%>
 <%# // ログインしている場合 %>
 </body>
