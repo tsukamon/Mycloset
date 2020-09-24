@@ -29,3 +29,15 @@
 ### Association
 
 - belongs_to :user
+- belongs_to :category
+
+## cotegories テーブル
+
+| Column                   | Type    | Options      |
+| --------                 | ------  | ------------ |
+| name                     | string  | null: false  | 
+
+### Association
+
+- has_many :items
+
