@@ -19,7 +19,7 @@ header{
   list-style: none;
   justify-content: flex-end;
 }
-.login, .sign-up, .logout, .user-nickname {
+.login, .sign-up, .logout, .user-nickname, .search-btn {
   margin-right: 10px;
   display: inline-block;
   padding: 0.25em 0.5em;
@@ -123,4 +123,8 @@ header p.des{
 
 .list {
   margin: 10px 0 0 3px;
+}
+
+.left-nav {
+  margin-top: 10px;
 }

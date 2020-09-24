@@ -7,6 +7,8 @@ class ItemsController < ApplicationController
     if user_signed_in?
       @item = Item.all.where(user_id: current_user.id)
       @item = @item.order('created_at DESC')
+      @p = @item.ransack(params[:q])
+      set_category_column
     end
   end
 
@@ -45,9 +47,19 @@ class ItemsController < ApplicationController
     end
   end
 
-
-
+  def search
+    @item = Item.all.where(user_id: current_user.id)
+    @p = @item.ransack(params[:q])
+    @results = @p.result.includes(:category).order('created_at DESC')
+  end
+  
+  
+  
   private
+  
+  def set_category_column
+    @category_name = Category.select("name").distinct
+  end
 
   def item_params
     params.require(:item).permit(:explanation, :category_id, :season_id, :brand, :purchase_day, :price, :place, :image).merge(user_id: current_user.id)
@@ -62,4 +74,5 @@ class ItemsController < ApplicationController
       redirect_to root_path
     end
   end
+
 end
