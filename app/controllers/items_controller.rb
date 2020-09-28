@@ -52,27 +52,22 @@ class ItemsController < ApplicationController
     @p = @item.ransack(params[:q])
     @results = @p.result.includes(:category).order('created_at DESC')
   end
-  
-  
-  
+
   private
-  
+
   def set_category_column
-    @category_name = Category.select("name").distinct
+    @category_name = Category.select('name').distinct
   end
 
   def item_params
     params.require(:item).permit(:explanation, :category_id, :season_id, :brand, :purchase_day, :price, :place, :image).merge(user_id: current_user.id)
   end
 
-  def set_item 
-    @item = Item.find(params[:id]) 
+  def set_item
+    @item = Item.find(params[:id])
   end
 
   def set_user
-    unless user_signed_in? && current_user.id == @item.user_id
-      redirect_to root_path
-    end
+    redirect_to root_path unless user_signed_in? && current_user.id == @item.user_id
   end
-
 end

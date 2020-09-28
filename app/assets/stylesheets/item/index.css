@@ -110,21 +110,22 @@ header p.des{
   font-size: 3vh;
 }
 
-/* NEW ARRIVAL */
-
-.item-lists {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.item-info {
-  margin: 1vh 0;
-}
-
 .list {
   margin: 10px 0 0 3px;
 }
 
 .left-nav {
   margin-top: 10px;
+}
+
+/* NEW ARRIVAL */
+
+.item-lists {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5%;
+}
+
+.item-info {
+  margin: 1vh 0;
 }
