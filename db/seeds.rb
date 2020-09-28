@@ -1,7 +1,7 @@
 Category.create(name:'--')
 Category.create(name:'ジーンズ')
 Category.create(name:'パンツ')
-Category.create(name:'トップス(羽織りもの)')
+Category.create(name:'トップス(羽織り)')
 Category.create(name:'Tシャツ')
 Category.create(name:'シャツ')
 Category.create(name:'インナー')
