@@ -56,7 +56,7 @@ class ItemsController < ApplicationController
   private
 
   def set_category_column
-    @category_name = Category.select('name').distinct
+    @category_name = Category.where(user_id: current_user.id).select('name').distinct
   end
 
   def item_params

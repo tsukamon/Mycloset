@@ -1,0 +1,33 @@
+<div class="container">
+<%= render "shared/header" %>
+
+<div class="categories-new">
+  <%= form_with model: @category, local: true do |f| %>
+    <div class="field">
+      <%= f.label :name, "カテゴリーを追加" %><br>
+      <%= f.text_field :name %>
+      <%= f.submit "Create", class:"categories-input-btn" %>
+    </div>
+  <%end%>
+</div>
+
+<div class="categories-show">
+  <table class="category-table">
+    <tbody>
+    <% if @categories.present? %>
+    <% @categories.each do |category|%>
+    <%= form_with model: category, local: true do |f| %>
+      <tr>
+        <td><%= f.text_area :name, class:"small-items-text", id:"item-info", placeholder:"" ,rows:"1" ,maxlength:"50" %></td>
+        <td><%= f.submit "Edit", class: "category-edit-btn" %></td>
+        <td><%= link_to 'Destroy', category_path(category.id), method: :delete, class:'category-destroy' %></td>
+      </tr>
+    <%end%>
+    <%end%>
+    <%end%>
+    </tbody>
+  </table>
+  <div class="input-btn-contents">
+    <%=link_to 'もどる', root_path, class:"category-back-btn" %>
+  </div>
+</div>

@@ -27,7 +27,7 @@
     <%= link_to image_tag('カメラアイコン8.jpeg', class: "post-btn-icon"), new_item_path %>
   </div>
   <div class="left-nav">
-    <%= search_form_for(@p, url: search_path, method: :search, method: :get ) do |f| %>
+    <%= search_form_for(@p, url: search_path) do |f| %>
       <%= f.label :category_name_eq, 'カテゴリー：' %>
       <%= f.collection_select :category_name_eq, @category_name, :name, :name %>
       <br>
