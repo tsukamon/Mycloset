@@ -98,3 +98,20 @@ Top画面からユーザー登録、ログインできます。
 
 ![2f8c70972e302671d38f5e3c5846c7b5](https://user-images.githubusercontent.com/69575450/94776279-679e4680-03fc-11eb-9138-4adb6e933e7f.gif)
 
+またカテゴリー別にアイテムを見れるようにもしました。
+
+![496addebf66a93c846e89c9aaa571701](https://user-images.githubusercontent.com/69575450/94779325-b8646e00-0401-11eb-9719-441cb13f23b7.gif)
+
+## 使用技術
+
+HTML,CSS,Ruby,Rails,MySQL,AWS
+
+## 画面遷移図
+
+<img width="741" alt="スクリーンショット 2020-10-01 16 30 22" src="https://user-images.githubusercontent.com/69575450/94780496-7d633a00-0403-11eb-91bc-853447f3d023.png">
+
+## 課題や今後実装したい機能
+
+カテゴリーの登録、編集、削除機能をjavascriptを使って非同期通信で行えるようにしたいです。
+
+そのためjavascriptを勉強中です。
