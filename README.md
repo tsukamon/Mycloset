@@ -81,7 +81,7 @@ Password: sample1
 
 Top画面からユーザー登録、ログインできます。
 
-![トップ](app/assets/images/top-page.png)
+<img width="563" alt="top-page" src="https://user-images.githubusercontent.com/69575450/94776853-6c172f00-03fd-11eb-930f-a3f1755643f5.png">
 
 投稿画面では、画像とカテゴリーとシーズンを登録する事で投稿できます。他にも購入日やお店なども情報として登録できます。
 
