@@ -124,6 +124,8 @@ header p.des{
   display: flex;
   flex-wrap: wrap;
   margin: 5%;
+  text-align: center;
+  justify-content: center;
 }
 
 .item-info {
