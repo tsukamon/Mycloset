@@ -104,7 +104,13 @@ Top画面からユーザー登録、ログインできます。
 
 ## 使用技術
 
-HTML,CSS,Ruby,Rails,MySQL,AWS
+### 使用言語
+
+HTML/CSS/Ruby/Ruby on Rails
+
+### 開発環境
+
+Ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
 
 ## 画面遷移図
 
