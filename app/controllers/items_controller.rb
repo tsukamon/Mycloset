@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
 
   def index
     if user_signed_in?
-      @item = Item.all.where(user_id: current_user.id)
+      @item = Item.all.where(user_id: current_user.id).includes(:category)
       @item = @item.order('created_at DESC')
       @p = @item.ransack(params[:q])
       set_category_column

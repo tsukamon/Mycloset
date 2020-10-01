@@ -1,19 +1,22 @@
 <div class="container">
 <%= render "shared/header" %>
 
+<%# カテゴリー追加form %>
 <div class="categories-new">
-  <%= form_with model: @category, local: true do |f| %>
+  <%= form_with model: @category, id: "form-category", local: true do |f| %>
     <div class="field">
       <%= f.label :name, "カテゴリーを追加" %><br>
-      <%= f.text_field :name %>
-      <%= f.submit "Create", class:"categories-input-btn" %>
+      <%= f.text_field :name, id: "name" %>
+      <%= f.submit "Create", class:"categories-input-btn", id:"categories-input" %>
     </div>
   <%end%>
 </div>
+<%# //カテゴリー追加form %>
 
 <div class="categories-show">
+  <%# 登録したカテゴリー展開 %>
   <table class="category-table">
-    <tbody>
+    <tbody id="list-category">
     <% if @categories.present? %>
     <% @categories.each do |category|%>
     <%= form_with model: category, local: true do |f| %>
@@ -27,6 +30,7 @@
     <%end%>
     </tbody>
   </table>
+  <%# //登録したカテゴリー展開 %>
   <div class="input-btn-contents">
     <%=link_to 'もどる', root_path, class:"category-back-btn" %>
   </div>
