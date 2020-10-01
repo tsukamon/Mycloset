@@ -85,11 +85,11 @@ Top画面からユーザー登録、ログインできます。
 
 投稿画面では、画像とカテゴリーとシーズンを登録する事で投稿できます。他にも購入日やお店なども情報として登録できます。
 
-![投稿ページ](app/assets/images/newpage.png)
+<img width="285" alt="newpage" src="https://user-images.githubusercontent.com/69575450/94776965-a1bc1800-03fd-11eb-8651-ddcbc4ba0124.png">
 
 ログイン後のトップページから自分が登録したアイテムをみる事ができます。
 
-![トップページ](app/assets/images/ログイン後.png)
+<img width="378" alt="ログイン後" src="https://user-images.githubusercontent.com/69575450/94777022-b698ab80-03fd-11eb-90ce-13ea81a2998f.png">
 
 
 ## 工夫したポイント
