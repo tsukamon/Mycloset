@@ -94,11 +94,11 @@ Top画面からユーザー登録、ログインできます。
 
 ## 工夫したポイント
 
-今回使い場所が店先などになることを考え携帯から簡単に使えるようにしています。その為VIEWも携帯から見やすく設定しました。また登録したアイテムの編集、削除も可能です。初めは予めカテゴリーを用意しておいたのですが、ユーザーの使用の自由度をあげるためにカテゴリーも登録できるようにしました。その際は一つのページで登録、編集、削除が可能にしてあります。
+今回使い場所が店先などになることを考え携帯から簡単に使えるようにしています。その為VIEWも携帯から見やすく設定しました。登録したアイテムの編集、削除も可能です。初めは予めカテゴリーを用意しておいたのですが、ユーザーの使用の自由度をあげるためにカテゴリーも登録できるようにしました。その際は一つのページで登録、編集、削除が可能にしてあります。
 
 ![2f8c70972e302671d38f5e3c5846c7b5](https://user-images.githubusercontent.com/69575450/94776279-679e4680-03fc-11eb-9138-4adb6e933e7f.gif)
 
-またカテゴリー別にアイテムを見れるようにもしました。
+カテゴリー別にアイテムを見れるようにもしました。
 
 ![496addebf66a93c846e89c9aaa571701](https://user-images.githubusercontent.com/69575450/94779325-b8646e00-0401-11eb-9719-441cb13f23b7.gif)
 
@@ -110,7 +110,12 @@ HTML/CSS/Ruby/Ruby on Rails
 
 ### 開発環境
 
-Ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
+Ruby/Ruby on Rails/MySQL/Github/AWS/Unicorn/Nginx/Visual Studio Code
+
+## ER図
+
+<img width="668" alt="スクリーンショット 2020-10-01 17 30 58" src="https://user-images.githubusercontent.com/69575450/94786450-f49ccc00-040b-11eb-98fb-5d4a2c9bc26c.png">
+
 
 ## 画面遷移図
 
