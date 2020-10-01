@@ -81,7 +81,7 @@ Password: sample1
 
 Top画面からユーザー登録、ログインできます。
 
-![トップページ](app/assets/images/top_page.png)
+![トップ](app/assets/images/top-page.png)
 
 投稿画面では、画像とカテゴリーとシーズンを登録する事で投稿できます。他にも購入日やお店なども情報として登録できます。
 
