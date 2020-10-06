@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :categories
 
   with_options presence: true do
-    validates :nickname
+    validates :nickname, length: { minimum: 1, maximum: 8}
     validates :password, format: { with: /([0-9].*[a-zA-Z]|[a-zA-Z].*[0-9])/, message: 'Include both letters and numbers' }
   end
 end
